@@ -1,25 +1,26 @@
 body {
-  text: white;
+  text: black;
   text-contrast: black;
   highlight: #2493ff;
-  background: #121212;
+  background: #ffffff;
   placeholder: black;
   font-main: "Roboto";
   font-title: "Quicksand";
   secondary: transparent;
   hover: transparent;
-  
+
   border-radius: 6px;
   border-radius-secondary: 30px;
   border-radius-round: 100%;
 }
+
 import stars from "../public/backgrounds/stars.json";
 
 /* LINK */
 
 .link {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .link:hover {
@@ -61,7 +62,7 @@ import stars from "../public/backgrounds/stars.json";
 /* Fork Me Button */
 * {
   box-sizing: border-box;
-  color: #ffffff;
+  color: #000000;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -83,6 +84,7 @@ import stars from "../public/backgrounds/stars.json";
   top: 0;
   right: 0;
 }
+
 /* END */
 
 nav {
@@ -95,7 +97,7 @@ nav a {
   float: right;
   margin-left: 5.5px;
   display: block;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   padding: 20px 20px;
   text-decoration: none;
@@ -113,9 +115,9 @@ nav a:hover {
 
 nav a.active {
   background-color: #2493ff;
-  color: white;
+  color: black;
   border-radius: 30px;
-  
+
 }
 
 nav a.active:hover {
@@ -133,7 +135,10 @@ nav .icon {
 
 
 @media screen and (max-width: 555px) {
-  nav a:not(:first-child) {display: none;}
+  nav a:not(:first-child) {
+    display: none;
+  }
+
   nav a.icon {
     float: right;
     display: block;
@@ -141,12 +146,16 @@ nav .icon {
 }
 
 @media screen and (max-width: 555px) {
-  nav.responsive {position: relative;}
+  nav.responsive {
+    position: relative;
+  }
+
   nav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+
   nav.responsive a {
     float: none;
     display: block;
@@ -159,34 +168,82 @@ h1 {
   font: Quicksand;
   bottom: 2%;
 }
+
 input {
-
-  width: 640px;
-  height: 46px;
-  padding: 20px 20px;
-  margin: 10px 0;
-  box-sizing: border-box;
-  border: 3px white;
-  border-radius: 6px;
-  background-color: #2493ff;
-    transition: 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  height: 45px;
+  width: 560px;
+  border: 3px black;
+  border-radius: 22px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 3px gray;
 }
+
 input[type=text] {
-  transition: 0.5s;
-  color: black; 
-  font-size: large;
-  transition-duration: 0.5s;
-  transform: translate(0px, -6px);
+  color: black;
+  font-size: medium;
+  text-indent: 50px;
+}
 
+.shortcut {
+  position: absolute;
+  transform: translate(-50%, 0%);
+  width: 110px;
+  height: 110px;
+  align-items: center;
+  text-decoration: none;
 }
-input:hover {
-  -webkit-box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.46); 
-box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.46);
-  transition: 0.5s;
-  transition-duration: 0.8s;
-  transform: translate(0px, -10px);
+
+.shortcut:hover {
+  position: absolute;
+  transform: translate(-50%, 0%);
+  width: 110px;
+  height: 110px;
+  align-items: center;
+  text-decoration: none;
+  background-color: #E8E8E9;
+  border-radius: 5px;
 }
-#card1, #card2, #card3, #card4 {
+
+.icon {
+  position: relative;
+  left: 30%;
+  top: 15%;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #F1F3F4;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  position: relative;
+  top: 25%;
+  height: 25px;
+  width: 25px;
+}
+
+.title span {
+  top: 30px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  font-size: smaller;
+}
+
+#card1,
+#card2,
+#card3,
+#card4 {
   outline: 3.5px solid #004be0;
   text-align: center;
   floating: center;
@@ -195,7 +252,7 @@ box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.46);
   color: white;
   padding: 4.5rem;
   border-radius: 5.5px;
-    transition: 0.5s;
+  transition: 0.5s;
 }
 
 .searchicon {
@@ -207,13 +264,25 @@ box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.46);
   left: 7px;
 }
 
-#card1:hover, #card2:hover, #card3:hover, #card4:hover{
-  background-color:  #38b5cf;
+.logo {
+  position: absolute;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  height: 64px;
+  width: 350px;
+}
+
+#card1:hover,
+#card2:hover,
+#card3:hover,
+#card4:hover {
+  background-color: #38b5cf;
   cursor: pointer;
   transition: 0.5s;
   transition-duration: 0.8s;
   transform: translate(0px, -10px);
 }
+
 #featured {
   max-width: 1000px;
   margin: 0 auto;
@@ -221,47 +290,48 @@ box-shadow: 0px 10px 35px 0px rgba(0,0,0,0.46);
   display: grid;
   grid-gap: 1rem;
   display: flex;
-flex-direction: row;
+  flex-direction: row;
   justify-content: center;
 }
+
 .clock {
-    position: absolute;
-    width: 350px;
-    top: 4%;
-    text-align: right;
-    left: 25px;
-    transform: translateX(-50%) translateY(-50%);
-    color: #2493ff;
-    font-size: 25px;
-    letter-spacing: 3px;
-  
-  hr.rounded {
-  border-top: 7px solid #bbb;
-  border-radius: 6px;
-  color: #ffffff;
-    width: 500px;
-}
-
-  
-p {
-  font-family: verdana;
-  font-size: 20px;
-  text-align: center;
-  cor: white;
-}
-
-.center {
-  text-align: center;
-}
-
-h2 {
-  font-size: 20px;
-  text-align: center;
-  color: white;
-}
-
-h3 {
+  position: absolute;
+  width: 350px;
+  top: 4%;
+  text-align: right;
+  left: 25px;
+  transform: translateX(-50%) translateY(-50%);
+  color: #2493ff;
   font-size: 25px;
-  text-align: center;
-  color: white;
+  letter-spacing: 3px;
 
+  hr.rounded {
+    border-top: 7px solid #bbb;
+    border-radius: 6px;
+    color: #ffffff;
+    width: 500px;
+  }
+
+
+  p {
+    font-family: verdana;
+    font-size: 20px;
+    text-align: center;
+    cor: white;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+
+  h3 {
+    font-size: 25px;
+    text-align: center;
+    color: white;
+  }
